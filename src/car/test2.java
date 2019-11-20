@@ -7,7 +7,8 @@ public class test2 {
 		System.out.println("a");
 		System.out.println("hello");
 		System.out.println("baoyiting");
-
+		System.out.println("csy");
+	
 	}
 
 }
