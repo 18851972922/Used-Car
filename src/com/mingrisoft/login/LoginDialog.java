@@ -32,11 +32,11 @@ public class LoginDialog extends JFrame {// 登录窗体
 	private LoginPanel getLoginPanel() {// 初始化loginPanel登录面板的方法
 		if (loginPanel == null) {// 登录面板中没有组件时
 			jLabel1 = new JLabel();// “密码”标签
-			jLabel1.setBounds(new Rectangle(86, 71, 55, 18));// 设置“密码”标签的位置与宽高
+			jLabel1.setBounds(new Rectangle(80,330, 55, 18));// 设置“密码”标签的位置与宽高
 			jLabel1.setText("密　码：");// 设置“密码”标签的文本内容
 			jLabel = new JLabel();// “用户名”标签
 			jLabel.setText("用户名：");// 设置“用户名”标签的文本内容
-			jLabel.setBounds(new Rectangle(85, 41, 56, 18));// 设置“用户名”标签的位置与宽高
+			jLabel.setBounds(new Rectangle(80, 280, 56, 18));// 设置“用户名”标签的位置与宽高
 			loginPanel = new LoginPanel();// 登录面板
 			loginPanel.setLayout(null);// 设置登录面板的布局为绝对布局
 			loginPanel.setBackground(new Color(0xD8DDC7));// 设置登录面板的背景色
@@ -53,7 +53,7 @@ public class LoginDialog extends JFrame {// 登录窗体
 	private JTextField getUserField() {// 初始化“用户名”文本框
 		if (userField == null) {// “用户名”文本框对象为空时
 			userField = new JTextField();// 实例化“用户名”文本框
-			userField.setBounds(new Rectangle(142, 39, 127, 22));// 设置“用户名”文本框的位置和宽高
+			userField.setBounds(new Rectangle(130, 280, 127, 22));// 设置“用户名”文本框的位置和宽高
 		}
 		return userField;// 返回“用户名”文本框
 	}
@@ -61,7 +61,7 @@ public class LoginDialog extends JFrame {// 登录窗体
 	private JPasswordField getPasswordField() {// 初始化“密码”文本框
 		if (passwordField == null) {// “密码”文本框对象为空时
 			passwordField = new JPasswordField();// 实例化“密码”文本框
-			passwordField.setBounds(new Rectangle(143, 69, 125, 22));// 设置“密码”文本框的位置和宽高
+			passwordField.setBounds(new Rectangle(130, 330, 127, 22));// 设置“密码”文本框的位置和宽高
 			passwordField.addKeyListener(new KeyAdapter() {// 为“密码”文本框添加键盘时间的监听
 				public void keyTyped(KeyEvent e) {
 					if (e.getKeyChar() == '\n')// 按下的按键是回车时
@@ -76,7 +76,7 @@ public class LoginDialog extends JFrame {// 登录窗体
 	private JButton getExitButton() {// 初始化“退出”按钮
 		if (exitButton == null) {// “退出”按钮对象为空时
 			exitButton = new JButton();// 实例化“退出”按钮
-			exitButton.setBounds(new Rectangle(181, 114, 48, 20));// 设置“退出”按钮的位置和宽高
+			exitButton.setBounds(new Rectangle(215, 380, 48, 20));// 设置“退出”按钮的位置和宽高
 			exitButton.setIcon(new ImageIcon(getClass().getResource("/res/exitButton.jpg")));// 设置“退出”按钮的图标
 			exitButton.addActionListener(new ActionListener() {// 为“退出”按钮天津爱动作事件的监听
 				public void actionPerformed(ActionEvent e) {
@@ -89,9 +89,9 @@ public class LoginDialog extends JFrame {// 登录窗体
 
 	private void initialize() {// 初始化登录窗体
 		Dimension size = getToolkit().getScreenSize();// 获得屏幕尺寸
-		setLocation((size.width - 296) / 2, (size.height - 188) / 2);// 设置登录窗体
-		setSize(296, 188);// 设置登录窗体的宽高
-		this.setTitle("系统登录");// 设置登录窗体的标题
+		setLocation((size.width - 230) / 2, (size.height - 400) / 2);// 设置登录窗体
+		setSize(380, 500);// 设置登录窗体的宽高
+		this.setTitle("二手车系统登录");// 设置登录窗体的标题
 		setContentPane(getLoginPanel());// 将登录面板置于登录窗体中
 	}
 

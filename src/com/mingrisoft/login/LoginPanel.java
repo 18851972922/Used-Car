@@ -12,7 +12,7 @@ public class LoginPanel extends JPanel {// 登录面板
 
 	public LoginPanel() {// 登录面板的构造方法
 		super();// 调用父类JPanel的构造器
-		URL url = getClass().getResource("/res/login.jpg");// 获得登录面板背景图片的路径
+		URL url = getClass().getResource("/res/picture1.jpg");// 获得登录面板背景图片的路径
 		img = new ImageIcon(url).getImage();// 获得登录面板的背景图片
 	}
 

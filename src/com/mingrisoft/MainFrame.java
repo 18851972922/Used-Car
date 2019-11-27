@@ -26,8 +26,8 @@ public class MainFrame extends JFrame {// 主窗体
 	}
 
 	private void initialize() {// 初始化主窗体的方法
-		this.setSize(800, 600);// 设置主窗体的宽高
-		this.setTitle("铭泰企业进销存管理系统");// 设置窗体的题目
+		this.setSize(600, 500);// 设置主窗体的宽高
+		this.setTitle("二手车管理系统");// 设置窗体的题目
 	}
 
 	
