@@ -2,7 +2,9 @@ package com.mingrisoft;
 
 import javax.swing.*;
 
+import com.mingrisoft.cheliangxinxi.Maichefabu;
 import com.mingrisoft.gujia.GuJia;
+import com.mingrisoft.headpage.HeadPage;
 import com.mingrisoft.login.LoginDialog;
 
 public class MainFrame extends JFrame {// 主窗体
@@ -16,10 +18,14 @@ public class MainFrame extends JFrame {// 主窗体
 	 */
 	public static void main(String[] args) {
 		
-		JFrame login = new LoginDialog();// 登录窗体
-		login.setVisible(true);// 使登录窗体可见
-		JFrame gujia = new GuJia();// 登录窗体
-		gujia.setVisible(true);// 使登录窗体可见
+//		JFrame login = new LoginDialog();// 登录窗体
+//		login.setVisible(true);// 使登录窗体可见
+//		JFrame gujia = new GuJia();// 登录窗体
+//		gujia.setVisible(true);// 使登录窗体可见
+		JFrame maiche = new Maichefabu();
+		maiche.setVisible(true);
+//		JFrame page = new HeadPage();
+//		page.setVisible(true);
 	}
 	
 
