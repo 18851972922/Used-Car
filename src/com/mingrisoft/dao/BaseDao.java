@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class BaseDao {
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
-	private static final String URL="jdbc:mysql://localhost:3316/tb_usedcar";
+	private static final String URL="jdbc:mysql://localhost:3306/tb_usedcar?useUnicode=true&characterEncoding=UTF-8";
 	private static final String UNAME = "sh123456";
 	private static final String PWD = "123456";
 	private static Connection con = null;

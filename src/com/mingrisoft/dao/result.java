@@ -1,14 +1,26 @@
 package com.mingrisoft.dao;
 
 public class result {
+	private int id;
 	private String name;
 	private double price;
 	private double age;
-	private double milge;
-	private int mession;
+	private double miles;
+	private int comboBox;
+	private String city;
+	private long phone;
 	public result() {
 		
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -27,17 +39,30 @@ public class result {
 	public void setAge(double age) {
 		this.age = age;
 	}
-	public double getMilge() {
-		return milge;
+	public double getMiles() {
+		return miles;
 	}
-	public void setMilge(double milge) {
-		this.milge = milge;
+	public void setMiles(double miles) {
+		this.miles = miles;
 	}
-	public double getMession() {
-		return mession;
+	public int getComboBox() {
+		return comboBox;
 	}
-	public void setMession(int mession) {
-		this.mession = mession;
+	public void setComboBox(int comboBox) {
+		this.comboBox = comboBox;
 	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public long getPhone() {
+		return phone;
+	}
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
+	
 	
 }
