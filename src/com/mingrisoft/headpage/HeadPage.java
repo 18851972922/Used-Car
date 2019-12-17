@@ -3,7 +3,13 @@ package com.mingrisoft.headpage;
 import java.awt.*;
 import javax.swing.*;
 import com.mingrisoft.MainFrame;
-
+import com.mingrisoft.dao.Buycar;
+import com.mingrisoft.gujia.GuJia;
+import com.mingrisoft.kankan.GaoDuan;
+import com.mingrisoft.kankan.PianYi;
+import com.mingrisoft.kankan.SouSuo;
+import com.mingrisoft.kankan.XinShou;
+import com.mingrisoft.kankan.ZhunXin;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -22,7 +28,7 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 	private JButton xinche = null;// “准新车”按钮
 	private JButton pianyi = null;// “便宜”按钮
 	private JButton woyaomaiche = null;// “我要卖车”按钮
-	private JTextField sousuoField = null;// “搜索”文本框
+	private static JTextField sousuoField = null;// “搜索”文本框
 	private JButton aiche = null;// “爱车”文本框
     private MainFrame mainFrame;// 主窗体
     private JLabel jLabel1 = null;// “装饰”标签
@@ -30,7 +36,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 	public MainFrame getMainFrame() {
 		return mainFrame;
 	}
-	
+	public static String getSearchStr() {
+		String searchStr=sousuoField.getText();
+		return searchStr;
+	}
+
 	
 	public HeadPage() {// 窗体的构造方法
 		try {
@@ -101,7 +111,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			kanche.setIcon(new ImageIcon(getClass().getResource("/res/kanche.jpg")));// 设置“返回”按钮的图标
 			kanche.addActionListener(new ActionListener() {// 为“确认发布”按钮添加动作事件的监听
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (kanche == e.getSource()) {
+						JFrame buycar = new Buycar();
+						buycar.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -115,7 +129,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			gujia.setIcon(new ImageIcon(getClass().getResource("/res/gujia.jpg")));// 设置“返回”按钮的图标
 			gujia.addActionListener(new ActionListener() {// 为“确认发布”按钮添加动作事件的监听
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (gujia == e.getSource()) {
+						JFrame gujia = new GuJia();
+						gujia.setVisible(true);// 使主窗体可见
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -143,7 +161,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			sousuo.setIcon(new ImageIcon(getClass().getResource("/res/sousuo.jpg")));
 			sousuo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);
+					if (sousuo == e.getSource()) {
+						JFrame sousou = new SouSuo();
+						sousou.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -171,7 +193,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			laren.setIcon(new ImageIcon(getClass().getResource("/res/laren.jpg")));
 			laren.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (laren == e.getSource()) {
+						JFrame gaoduan = new GaoDuan();
+						gaoduan.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -185,7 +211,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			xinshou.setIcon(new ImageIcon(getClass().getResource("/res/xinshou.jpg")));
 			xinshou.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (xinshou == e.getSource()) {
+						JFrame xinshou = new XinShou();
+						xinshou.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -199,7 +229,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			xinche.setIcon(new ImageIcon(getClass().getResource("/res/xinche.jpg")));
 			xinche.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (xinche == e.getSource()) {
+						JFrame zhunxin = new ZhunXin();
+						zhunxin.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -213,7 +247,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			pianyi.setIcon(new ImageIcon(getClass().getResource("/res/pianyi.jpg")));
 			pianyi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (pianyi == e.getSource()) {
+						JFrame jianpianyi = new PianYi();
+						jianpianyi.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -242,7 +280,11 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			woyaokanche.setIcon(new ImageIcon(getClass().getResource("/res/woyaokanche.jpg")));
 			woyaokanche.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (woyaokanche == e.getSource()) {
+						JFrame buycar = new Buycar();
+						buycar.setVisible(true);
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
@@ -256,20 +298,24 @@ public class HeadPage extends JFrame {// 车辆首页窗体
 			aiche.setIcon(new ImageIcon(getClass().getResource("/res/aiche.jpg")));
 			aiche.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					if (aiche == e.getSource()) {
+						JFrame gujia = new GuJia();
+						gujia.setVisible(true);// 使主窗体可见
+						setVisible(false);// 使登录窗体不可见
+					}
 				}
 			});
 		}
 		return aiche;// 返回“取消”按钮
 	}
 	
+	
 	private void initialize() {// 初始化登录窗体
-		Dimension size = getToolkit().getScreenSize();// 获得屏幕尺寸
-		setLocation((size.width - 230) / 2, (size.height - 400) / 2);// 设置登录窗体
+		setLocation(320, 100);// 设置登录窗体位置
 		setSize(600, 500);// 设置登录窗体的宽高
-		this.setTitle("车辆信息发布");// 设置登录窗体的标题
+		this.setTitle("首页");// 设置登录窗体的标题
 		setContentPane(getLoginPanel());// 将登录面板置于登录窗体中
 	}
 
-
+	
 }

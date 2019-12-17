@@ -2,10 +2,8 @@ package com.mingrisoft;
 
 import javax.swing.*;
 
-import com.mingrisoft.cheliangxinxi.Maichefabu;
-import com.mingrisoft.gujia.GuJia;
 import com.mingrisoft.headpage.HeadPage;
-import com.mingrisoft.login.LoginDialog;
+
 
 public class MainFrame extends JFrame {// 主窗体
 	private static final long serialVersionUID = 1L;
@@ -22,10 +20,13 @@ public class MainFrame extends JFrame {// 主窗体
 //		login.setVisible(true);// 使登录窗体可见
 //		JFrame gujia = new GuJia();// 登录窗体
 //		gujia.setVisible(true);// 使登录窗体可见
-		JFrame maiche = new Maichefabu();
-		maiche.setVisible(true);
-//		JFrame page = new HeadPage();
-//		page.setVisible(true);
+//		JFrame buycar = new Buycar();
+//		buycar.setVisible(true);
+		JFrame page = new HeadPage();
+		page.setVisible(true);
+//		JFrame xinshou = new XinShou();
+//		xinshou.setVisible(true);
+		
 	}
 	
 

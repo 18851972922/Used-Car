@@ -4,6 +4,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import com.mingrisoft.MainFrame;
+import com.mingrisoft.headpage.HeadPage;
 
 
 
@@ -150,7 +151,9 @@ public class GuJia extends JFrame {// 车辆估价窗体
 			backButton.setIcon(new ImageIcon(getClass().getResource("/res/backbutton.jpg")));// 设置“返回”按钮的图标
 			backButton.addActionListener(new ActionListener() {// 为“返回”按钮添加动作事件的监听
 				public void actionPerformed(ActionEvent e) {
-					System.exit(0);// 退出当前的应用程序
+					JFrame page = new HeadPage();
+					page.setVisible(true);
+					setVisible(false);
 				}
 			});
 		}
@@ -158,8 +161,7 @@ public class GuJia extends JFrame {// 车辆估价窗体
 	}
 
 	private void initialize() {// 初始化登录窗体
-		Dimension size = getToolkit().getScreenSize();// 获得屏幕尺寸
-		setLocation((size.width - 230) / 2, (size.height - 400) / 2);// 设置登录窗体
+		setLocation(400, 100);// 设置登录窗体位置
 		setSize(380, 500);// 设置登录窗体的宽高
 		this.setTitle("车辆估价");// 设置登录窗体的标题
 		setContentPane(getLoginPanel());// 将登录面板置于登录窗体中

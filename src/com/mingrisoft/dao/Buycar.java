@@ -8,6 +8,7 @@ import javax.swing.*;
 import com.mingrisoft.MainFrame;
 import com.mingrisoft.dao.BaseDao;
 import com.mingrisoft.gujia.GujiaPanel;
+import com.mingrisoft.headpage.HeadPage;
 
 
 
@@ -46,6 +47,7 @@ public class Buycar extends JFrame {// 车辆估价窗体
 	private static String searchStr;// “车龄”文本框中的内容
 	private JScrollPane scpDemo; //滚动框
 	private JTable tabDemo;   //表格模型
+	private JButton backButton = null;// “返回”按钮
     private MainFrame mainFrame;// 主窗体
 
 	public MainFrame getMainFrame() {
@@ -131,6 +133,7 @@ public class Buycar extends JFrame {// 车辆估价窗体
 			
 			gujiaPanel.add(getsearchButton(),null);
 			gujiaPanel.add(scpDemo);
+			gujiaPanel.add(getBackButton(), null);// 把“退出”按钮置于登录面板中
 
 	
 		}
@@ -1091,6 +1094,21 @@ public class Buycar extends JFrame {// 车辆估价窗体
 		return jbut6;// 返回“估价”按钮
 	}
 	
+	private JButton getBackButton() {// 初始化“返回首页”按钮
+		if (backButton == null) {// “返回”按钮对象为空时
+			backButton = new JButton();// 实例化“返回”按钮
+			backButton.setBounds(new Rectangle(550,25,60, 20));// 设置“返回”按钮的位置和宽高
+			backButton.setIcon(new ImageIcon(getClass().getResource("/res/backbutton.jpg")));// 设置“返回”按钮的图标
+			backButton.addActionListener(new ActionListener() {// 为“返回”按钮添加动作事件的监听
+				public void actionPerformed(ActionEvent e) {
+					JFrame page = new HeadPage();
+					page.setVisible(true);
+					setVisible(false);
+				}
+			});
+		}
+		return backButton;// 返回“返回”按钮
+	}
 	private void initialize() {// 初始化登录窗体
 		setLocation(320, 100);// 设置登录窗体位置
 		setSize(700,550);// 设置登录窗体的宽高
